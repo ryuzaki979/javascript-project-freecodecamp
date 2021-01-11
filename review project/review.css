@@ -1,0 +1,127 @@
+/*global*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --robotoMono:'Roboto Mono', monospace;
+}
+body{
+    background: #f1f5f8;
+    font-family: var(--robotoMono);
+    font-weight: bold;
+}
+
+.displayer{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
+    z-index: -5;
+}
+
+.btn{
+    background: transparent;
+    border: 2px solid #000;
+    border-radius:7px;
+    cursor: pointer;
+    font-family: var(--robotoMono);
+    outline: none;
+    padding: .35rem 1rem;
+    transition: all .5s ease;
+    color: #49a6e9;
+}
+.btn:hover{
+    transform: translateY(-10%);
+    border-color: #49a6e9;
+}
+
+
+/*global ends*/
+/*title*/
+h1{
+    font-size: 2rem;
+}
+.underline{
+    display: block;
+    margin: 5px auto;
+    height: 3px;
+    width: 100px;
+    background: #49a6e9;
+}
+
+#person__name{
+    letter-spacing: 2px;
+}
+#person__profession{
+    color: #49a6e9;
+}
+#person__about{
+    margin: .5rem 0;
+}
+
+.arrows{
+    width: 75px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: .5rem;
+}
+.arrows i{
+    cursor: pointer;
+}
+.arrows i:hover{
+    color: #49a6e9;
+}
+
+/*review*/
+.review{
+    margin: auto;
+    margin-top: 5rem;
+    background-color: #fff;
+    padding: 2rem;
+    width: 40%;
+    min-width: 350px;
+}
+.image__container{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 0 auto;
+    
+}
+#person__image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+.image__container::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:#49a6e9;
+    top: -5px;
+    left: 10px;
+}
+.image__container::after{
+    border-radius: 50%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10e";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background:#49a6e9;
+    color: #fff;
+    padding: 15px;
+    top: 0;
+    left:0;
+}

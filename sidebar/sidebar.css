@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --robotoMono:'Roboto Mono', monospace;
+}
+body{
+    background: #f1f5f8;
+    font-family: var(--robotoMono);
+    font-weight: bold;
+}
+
+li{
+    list-style: none;
+}
+a{
+    color: rgba(0, 0, 0, 0.685);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+a:hover{
+    color: #49a6e9;
+}
+
+.page__navigation a{
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+}
+.social__navigation a{
+    color: #49a6e9;
+}
+.social__navigation a:hover{
+    color: rgba(0, 0, 0, 0.685);
+}
+nav{
+    background: #fff;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.432);
+    width: 25vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    transform: translate(-25vw);
+    transition: all 1s ease;
+}
+.toggle{
+    transform: translate(0%);
+    transition: all 1s ease;
+}
+.nav__center{
+    height: 90vh;
+    width: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.nav__center,.page__navigation,.social__navigation,.nav__header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.nav__header{
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+}
+.nav__header i{
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+}
+.nav__header i:hover{
+    transform: rotate(180deg);
+}
+.social__navigation{
+    flex-direction: row;
+    justify-content: center;
+    padding-left: none;
+}
+.hamburger__container{
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor:pointer;
+}
+.hamburger__container:hover #hamburger{
+    color: #000;
+    border: 1px solid;
+    transform: rotate(90deg);
+}
+#hamburger{
+    color:#49a6e9;
+    font-size: 1.25rem;
+    transition:all .5s ease;
+}
+
+/*media quries*/
+@media screen and (max-width: 860px) {
+    nav{
+        width: 100%;
+        transform: translatex(-100%);
+        z-index: 2;
+    }
+    .hamburger__container{
+        z-index: 1;
+    }
+  }
+  

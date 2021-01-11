@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --robotoMono:'Roboto Mono', monospace;
+}
+body{
+    background: #f1f5f8;
+    font-family: var(--robotoMono);
+    font-weight: bold;
+}
+
+
+.displayer{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+.accordion{
+    background: #fff;
+    padding:1.5rem   2rem;
+    width: 35rem;
+    min-width: 300px;
+    height: 10vh;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 2rem 0;
+    transition: all .5s ease;
+}
+.show__accordion{
+    height: auto;
+}
+.accordion__outer i{
+border: 3px solid;
+color: #c59d5f;
+padding: .1rem;
+font-size: .75rem;
+transition: all .25s ease;
+pointer-events: none;
+}
+.accordion__outer i:hover{
+transform: rotate(90deg);
+cursor: pointer;
+}
+.accordion__inner{
+    margin-top: 2rem;
+}
+.icon__disable{
+    display: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    background: transparent;
+    border: 2px solid #000;
+    border-radius:7px;
+    cursor: pointer;
+    font-family: var(--robotoMono);
+    outline: none;
+    padding: .35rem 1rem;
+    transition: all .5s ease;
+}
+.btn:hover{
+    transform: translateY(-10%);
+}
